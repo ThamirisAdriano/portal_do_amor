@@ -1,35 +1,11 @@
-*{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  color: black;
-  
+.container_principal{
+  background: url(../src/assets/buda.webp);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size:auto;
+  border: 1px solid red;
+  width: auto;
 
-}
-
-body {
-  padding-top: 50px;
-
-}
-
-.form-style{
-  position:absolute;
-    top: 50%;
-    left: 50%;
-    width: 46rem;
-    padding: 4rem;
-    transform: translate(-50%, -50%);
-    background: #eee8ce;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
-
-}
-
-
-.row-style{
-  padding: 10px;
-  background-color: #eee8ce;
 }
 
 .spacer {
