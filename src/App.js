@@ -1,10 +1,8 @@
 import "./App.css";
 import Create from "./components/Create/create";
-import Header from "./components/Header/header";
 import Container from "react-bootstrap/Container";
-import Home from "./components/Home";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
@@ -20,13 +18,8 @@ function App() {
     }}>
     
     <Container>
-      <Header></Header>
-      <Router>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/create" element={<Create />} />
-        </Routes>
-      </Router>
+    
+      <Create></Create>
       
     </Container>
     </body>

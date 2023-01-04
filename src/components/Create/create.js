@@ -7,14 +7,17 @@ import Container from "react-bootstrap/Container";
 import MaskedFormControl from "react-bootstrap-maskedinput";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useForm } from "react-hook-form";
 
 
 
 export default function Create() {
+  const { register } = useForm();
   
   function handleSubmit(e) {
     e.preventDefault();
     const { nickname, birthday } = e.target.elements;
+    
 
     const obj = {};
     obj["nickname"] = nickname.value;
@@ -43,6 +46,7 @@ export default function Create() {
             <Form.Label>Nome</Form.Label>
             <Form.Control
               type="text"
+              required 
               id="nickname"
               name="Name"
               placeholder="Nome"
@@ -53,6 +57,7 @@ export default function Create() {
             <Form.Label>Data de Nascimento</Form.Label>
             <MaskedFormControl
               type="text"
+              required
               id="birthday"
               name="birthday"
               mask="11/11/1111"
