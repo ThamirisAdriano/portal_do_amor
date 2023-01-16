@@ -33,6 +33,15 @@ export default function Create() {
     });
   }
 
+  function handleClick(){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Favor preencher esse campo!',
+    })
+
+  }
+
   return (
     
     <Container>
@@ -43,7 +52,7 @@ export default function Create() {
             <Form.Label className="form_label_style">Nome</Form.Label>
             <Form.Control
               type="text"
-              required 
+               
               id="nickname"
               name="Name"
               placeholder="Nome"
@@ -54,7 +63,7 @@ export default function Create() {
             <Form.Label className="form_label_style">Data de Nascimento</Form.Label>
             <MaskedFormControl
               type="text"
-              required
+              
               id="birthday"
               name="birthday"
               mask="11/11/1111"
@@ -64,6 +73,7 @@ export default function Create() {
 
         <Button
           type="submit"
+          onClick={handleClick}
           style={{
             cursor: 'pointer',
             outline: 'none',
