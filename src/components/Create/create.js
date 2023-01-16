@@ -36,14 +36,11 @@ export default function Create() {
   return (
     
     <Container>
-      <div className="title-style">
      
-      </div>
-
-      <Form onSubmit={handleSubmit} className="form-style">
+      <Form onSubmit={handleSubmit} className="form-style" >
         <Row className="row-style">
-          <Form.Group as={Col} controlId="formGridNickname">
-            <Form.Label>Nome</Form.Label>
+          <Form.Group as={Col} controlId="formGridNickname" className="form_group_style">
+            <Form.Label className="form_label_style">Nome</Form.Label>
             <Form.Control
               type="text"
               required 
@@ -53,8 +50,8 @@ export default function Create() {
             />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridBirthday">
-            <Form.Label>Data de Nascimento</Form.Label>
+          <Form.Group as={Col} controlId="formGridBirthday" className="form_group_style">
+            <Form.Label className="form_label_style">Data de Nascimento</Form.Label>
             <MaskedFormControl
               type="text"
               required
@@ -76,8 +73,8 @@ export default function Create() {
             textTransform: 'uppercase',
             fontWeight: '700',
             border:'1px solid',
-            borderRadius: '100px',
-            padding: '18px 60px'
+            borderRadius: '8px',
+            padding: '16px 32px',
           }}
         >
           Enviar
