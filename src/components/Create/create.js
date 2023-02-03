@@ -8,6 +8,7 @@ import MaskedFormControl from "react-bootstrap-maskedinput";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+import { FormLabel } from "react-bootstrap";
 
 
 
@@ -33,14 +34,12 @@ export default function Create() {
     });
   }
 
-  function handleClick(){
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Favor preencher esse campo!',
-    })
-
-  }
+    function handleClick() {
+    var valor = document.getElementById("nickname").value;
+    if (valor == "") {
+        alert("Por favor, preencha o campo");
+    }
+}
 
   return (
     
@@ -52,7 +51,6 @@ export default function Create() {
             <Form.Label className="form_label_style">Nome</Form.Label>
             <Form.Control
               type="text"
-               
               id="nickname"
               name="Name"
               placeholder="Nome"
