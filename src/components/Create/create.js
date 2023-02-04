@@ -50,6 +50,7 @@ export default function Create() {
           <Form.Group as={Col} controlId="formGridNickname" className="form_group_style">
             <Form.Label className="form_label_style">Nome</Form.Label>
             <Form.Control
+              required
               type="text"
               id="nickname"
               name="Name"
@@ -61,7 +62,7 @@ export default function Create() {
             <Form.Label className="form_label_style">Data de Nascimento</Form.Label>
             <MaskedFormControl
               type="text"
-              
+              required
               id="birthday"
               name="birthday"
               mask="11/11/1111"
